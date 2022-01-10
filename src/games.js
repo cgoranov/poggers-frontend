@@ -8,10 +8,14 @@ class Game {
 
     renderGame(){
         return(
-            `<li id="store-${this.id}" data-id=${this.id}>
-                <span>${this.name}</span> 
+            `<li id="game-${this.id}" data-id=${this.id}>
+                <div>${this.name}</div>
+                <div>${this.publisher}</div>
+                <div>${this.genres}</div>
             </li>`
         )
     }
+
+    
 
 }
