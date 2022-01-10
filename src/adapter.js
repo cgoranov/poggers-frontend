@@ -4,5 +4,16 @@ class Adapter {
         this.url = `${url}/api/v1/games`
     }
 
-    
+    getGames() {
+        fetch(this.url) {
+            .then(r => r.json())
+            .then(games => {
+                games.forEach(game => {
+                    game
+                })
+            })
+        }
+    }
+
+
 }
