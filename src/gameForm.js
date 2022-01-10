@@ -12,6 +12,23 @@ class GameForm {
                 <input id="genre-input2" placeholder="genre" type="text"/><br>
                 <input id="game-submit" value='add game' type='submit'/>`
         formContainer.append(gameForm)
+
+        gameForm.addEventListener("submit", this.handleSubmit)
     }
+
+    handleSubmit(e) {
+        e.preventDefault()
+        
+        const formInputs = {}
+
+        Array.from(e.target.children).forEach(c => { 
+            if (c.nodeName === "INPUT") {
+                formInputs[c.id] = c.value
+            }
+        })
+
+        debugger
+    }
+
 
 }

@@ -13,14 +13,8 @@ class Game {
                 <div class="game-title" > Title: ${this.name}</div>
                 <div class="game-platform" > Platform: ${this.platform}</div>
                 <div> Genres: </div>
-                </li>`
+            </li>`
                 )
-    }
-
-    addToDom(){
-        const gamesContainer = document.getElementById("games-container");
-        gamesContainer.innerHTML += this.renderGame()
-        this.renderGenres()
     }
 
     renderGenres(){
@@ -31,5 +25,10 @@ class Game {
     }
 
 
+    addToDom(){
+        const gamesContainer = document.getElementById("games-container");
+        gamesContainer.innerHTML += this.renderGame()
+        this.renderGenres()
+    }
 
 }
