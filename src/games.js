@@ -1,10 +1,10 @@
 class Game {
 
-    constructor({id, name, platform, genres}){
+    constructor({id, name, platform, comments}){
         this.id = id
         this.name = name
         this.platform = platform
-        this.genres = genres
+        this.comments = comments
     }
 
     renderGame(){
@@ -12,15 +12,15 @@ class Game {
             `<li id="game-${this.id}" data-id=${this.id}>
                 <div class="game-title" > Title: ${this.name}</div>
                 <div class="game-platform" > Platform: ${this.platform}</div>
-                <div> Genres: </div>
+                <div> Comments: </div>
             </li>`
                 )
     }
 
-    renderGenres(){
+    renderComments(){
         const gamesLi = document.getElementById(`game-${this.id}`)
-        this.genres.forEach(g => {
-            gamesLi.innerHTML += `<div class="game-genre">${g.name}</div>`
+        this.comments.forEach(g => {
+            gamesLi.innerHTML += `<div class="game-comment">${g.content}</div>`
         })
     }
 
@@ -28,7 +28,7 @@ class Game {
     addToDom(){
         const gamesContainer = document.getElementById("games-container");
         gamesContainer.innerHTML += this.renderGame()
-        this.renderGenres()
+        this.renderComments()
     }
 
 }

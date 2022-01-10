@@ -19,18 +19,21 @@ class Adapter {
         fetch(this.url, {
             method: "POST",
             headers: {
-                "Content Type": "application/json",
+                "Content-Type": "application/json",
                 "Accept": "application/json"
             },
             body: JSON.stringify({
                 game: {
                     name: formInputs["name-input"],
                     platform: formInputs["platform-input"],
-                    relase_month: formInputs["release-month-input"],
-                    genreAttributes: [{name: formInputs["genre-input1"]}, {name: formInputs["genre-input2"]}]
+                    genre_attributes: [{name: formInputs["genre-input1"]}, {name: formInputs["genre-input2"]}]
+                }
             })
         })
-        
+        .then(resp => resp.json())
+        .then(data => {  
+            console.log(data)
+        })
     }
 
 

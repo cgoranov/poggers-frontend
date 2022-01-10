@@ -7,7 +7,6 @@ class GameForm {
         gameForm.innerHTML = 
                 `<input id="name-input" placeholder="title" type="text"/><br>
                 <input id="platform-input"  placeholder="platform" type="text"/><br>
-                <input id="release-month-input"  placeholder="release month" type="text"/><br>
                 <input id="genre-input1"  placeholder="genre" type="text"/><br>
                 <input id="genre-input2"  placeholder="genre" type="text"/><br>
                 <input id="game-submit" value='add game' type='submit'/>`
@@ -27,7 +26,8 @@ class GameForm {
             }
         })
 
-        debugger
+        adapter.createGames(formInputs)
+
     }
 
 
