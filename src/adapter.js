@@ -9,7 +9,9 @@ class Adapter {
         .then(r => r.json())
         .then(games => {
             games.forEach(game => {
-                console.log(game)
+                const g = new Game(game)
+                console.log(g)
+                g.addToDom
             })
         })
     }

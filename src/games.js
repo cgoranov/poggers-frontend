@@ -1,8 +1,8 @@
 class Game {
 
-    constructor(name, publisher, genres){
+    constructor({name, platform, genres}){
         this.name = name
-        this.publisher = publisher
+        this.platform = platform
         this.genres = genres
     }
 
@@ -18,7 +18,7 @@ class Game {
 
     addToDom(){
         const gamesContainer = document.getElementById("games-container");
-        gamesContainer.innerHTML += this.render()
+        gamesContainer.innerHTML += this.renderGame()
     }
 
 
