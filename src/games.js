@@ -16,6 +16,11 @@ class Game {
         )
     }
 
-    
+    addToDom(){
+        const gamesContainer = document.getElementById("games-container");
+        gamesContainer.innerHTML += this.render()
+    }
+
+
 
 }
