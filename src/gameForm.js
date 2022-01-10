@@ -10,7 +10,7 @@ class GameForm {
                 <input id="release-month-input" placeholder="release month" type="text"/><br>
                 <input id="genre-input1" placeholder="genre" type="text"/><br>
                 <input id="genre-input2" placeholder="genre" type="text"/><br>
-                <input id="game-submit" value='add Game' type='submit'/>`
+                <input id="game-submit" value='add game' type='submit'/>`
         formContainer.append(gameForm)
     }
 
