@@ -1,6 +1,7 @@
 class Game {
 
-    constructor({name, platform, genres}){
+    constructor({id, name, platform, genres}){
+        this.id = id
         this.name = name
         this.platform = platform
         this.genres = genres
@@ -9,16 +10,24 @@ class Game {
     renderGame(){
         return(
             `<li id="game-${this.id}" data-id=${this.id}>
-                <div>${this.name}</div>
-                <div>${this.publisher}</div>
-                <div>${this.genres}</div>
-            </li>`
-        )
+                <div class="game-title" > Title: ${this.name}</div>
+                <div class="game-platform" > Platform: ${this.platform}</div>
+                <div> Genres: </div>
+                </li>`
+                )
     }
 
     addToDom(){
         const gamesContainer = document.getElementById("games-container");
         gamesContainer.innerHTML += this.renderGame()
+        this.renderGenres()
+    }
+
+    renderGenres(){
+        const gamesLi = document.getElementById(`game-${this.id}`)
+        this.genres.forEach(g => {
+            gamesLi.innerHTML += `<div class="game-genre">${g.name}</div>`
+        })
     }
 
 
