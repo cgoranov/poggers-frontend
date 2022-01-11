@@ -7,8 +7,8 @@ class GameForm {
         gameForm.innerHTML = 
                 `<input id="name-input" placeholder="title" type="text"/><br>
                 <input id="platform-input"  placeholder="platform" type="text"/><br>
-                <input id="genre-input1"  placeholder="genre" type="text"/><br>
-                <input id="genre-input2"  placeholder="genre" type="text"/><br>
+                <input id="comment-input1"  placeholder="comment" type="text"/><br>
+                <input id="comment-input2"  placeholder="comment" type="text"/><br>
                 <input id="game-submit" value='add game' type='submit'/>`
         formContainer.append(gameForm)
 

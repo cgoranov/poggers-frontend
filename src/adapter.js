@@ -26,13 +26,14 @@ class Adapter {
                 game: {
                     name: formInputs["name-input"],
                     platform: formInputs["platform-input"],
-                    genre_attributes: [{name: formInputs["genre-input1"]}, {name: formInputs["genre-input2"]}]
+                    comment_attributes: [{content: formInputs["comment-input1"]}, {content: formInputs["comment-input2"]}]
                 }
             })
         })
         .then(resp => resp.json())
         .then(data => {  
-            console.log(data)
+            g = new Game(data);
+            g.addToDom()
         })
     }
 
