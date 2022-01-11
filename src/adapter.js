@@ -42,5 +42,9 @@ class Adapter {
         .catch(err => console.error('Error', err))
     }
 
+    deleteGame(li){
+        fetch(`${this.url}/${li.dataset.id}`, { method: "DELETE"})
+    }
+
 
 }
