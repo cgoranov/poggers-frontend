@@ -35,11 +35,18 @@ class Adapter {
             if (data.status === 201){
                 const g = new Game(data.game);
                 g.addToDom()
+                const form = document.querySelector('form')
+                form.children[0].value = ''
+                form.children[2].value = ''
+                form.children[4].value = ''
+                form.children[6].value = ''
             } else {
                 alert(data.errors)
             }
         })
         .catch(err => console.error('Error', err))
+
+
     }
 
     deleteGame(li){
