@@ -34,7 +34,11 @@ class GameForm {
         const gamesContainer = document.getElementById("games-container");
         gamesContainer.addEventListener("click", this.handleDelete)
     }
-    
+
+    handleDelete(e) {
+        const li = e.target.parentElement 
+    }
+
 
 
 }
