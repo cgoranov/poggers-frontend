@@ -37,6 +37,7 @@ class GameForm {
 
     handleDelete(e) {
         const li = e.target.parentElement 
+        adapter.deleteGame(li)
     }
 
 
