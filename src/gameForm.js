@@ -5,7 +5,7 @@ class GameForm {
         const formContainer = document.getElementById("form-container")
         const gameForm = document.createElement('form')
         gameForm.innerHTML = 
-                `<input id="name-input" placeholder="title" type="text"/><br>
+                `<input id="name-input" placeholder="name" type="text"/><br>
                 <input id="platform-input"  placeholder="platform" type="text"/><br>
                 <input id="comment-input1"  placeholder="comment" type="text"/><br>
                 <input id="comment-input2"  placeholder="comment" type="text"/><br>

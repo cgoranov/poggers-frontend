@@ -32,9 +32,14 @@ class Adapter {
         })
         .then(resp => resp.json())
         .then(data => {  
-            g = new Game(data);
-            g.addToDom()
+            if (data.status === 201){
+                const g = new Game(data.game);
+                g.addToDom()
+            } else {
+                alert(data.errors)
+            }
         })
+        .catch(err => console.error('Error', err))
     }
 
 
