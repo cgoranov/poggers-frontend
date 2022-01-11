@@ -13,15 +13,16 @@ class Game {
                 <div class="game-title" > Title: ${this.capitalize()}</div>
                 <div class="game-platform" > Platform: ${this.platform}</div>
                 <div> Comments: </div>
+                <ul id="${this.id}-comments-list"></ul>
                 <button data-action='delete'>X</button>
             </li>`
                 )
     }
 
     renderComments(){
-        const gamesLi = document.getElementById(`game-${this.id}`)
+        const commList = document.getElementById(`${this.id}-comments-list`)
         this.comments.forEach(g => {
-            gamesLi.innerHTML += `<div class="game-comment">${g.content}</div>`
+            commList.innerHTML += `<li>${g.content}</li>`
         })
     }
 
