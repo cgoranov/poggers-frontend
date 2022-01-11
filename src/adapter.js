@@ -44,6 +44,15 @@ class Adapter {
 
     deleteGame(li){
         fetch(`${this.url}/${li.dataset.id}`, { method: "DELETE"})
+        .then(r => r.json())
+        .then(data => {
+            if (data.message === "Successfully deleted"){
+                li.remove()
+            } else {
+                alert(data.message)
+            }
+        })
+        .catch(err => console.error(err))
     }
 
 
