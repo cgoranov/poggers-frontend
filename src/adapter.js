@@ -45,6 +45,7 @@ class Adapter {
                 g.addToDom()
                 const form = document.querySelector('form')
                 const comments = document.querySelector('form span').children
+                const spanContainer = document.querySelector('form span')
                 Array.from(form).forEach ( n => {
                     if (n.type === "text" ) {
                         n.value = ""
@@ -55,6 +56,8 @@ class Adapter {
                         comm.value = ""
                     }
                 })
+                spanContainer.innerHTML = '<input class="comment-input"  placeholder="comment" type="text"/>'
+
             } else {
                 alert(data.errors)
             }
