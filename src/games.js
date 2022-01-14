@@ -14,7 +14,7 @@ class Game {
                 <div class="game-platform" > Platform: ${this.platform}</div>
                 <div> Comments: </div>
                 <ul id="${this.id}-comments-list" class="comments-list-container" ></ul>
-                <button data-action='delete'>X</button>
+                <button data-action='delete'><i class="fas fa-trash-alt"></i></button>
             </li>`
                 )
     }
