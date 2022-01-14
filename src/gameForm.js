@@ -23,8 +23,6 @@ class GameForm {
         gameForm.addEventListener("submit", this.handleSubmit)
     }
 
-    
-
     handleSubmit(e) {
         e.preventDefault()
         
@@ -35,8 +33,7 @@ class GameForm {
                 formInputs[c.id] = c.value
             } else if (c.nodeName === "SPAN") {
                 let i = 1
-                Array.from(c.children).forEach( n => {
-                    
+                Array.from(c.children).forEach( n => {              
                     if (n.nodeName === "INPUT") {
                         formInputs[n.className + `${i ++ }`] = n.value
                     }
@@ -48,15 +45,25 @@ class GameForm {
 
     }
 
-    listenForDelete(){
-        const gamesContainer = document.getElementById("games-container");
-        gamesContainer.addEventListener("click", this.handleDelete)
-    }
+    // listenForDelete(){
+    //     const gamesContainer = document.getElementById("games-container");
+    //     gamesContainer.addEventListener("click", this.handleDelete)
 
-    handleDelete(e) {
-        const li = e.target.parentElement 
-        adapter.deleteGame(li)
-    }
+
+    //     const deleteButtons = document.querySelectorAll("ul#games-container li button")
+    //     debugger
+    //     // Array.from(deleteButtons).forEach (b => {
+    //     //     if (b.dataset.action === "delete") { 
+    //     //         b.addEventListener("click", this.handleDelete)
+    //     //     }
+    //     // }) 
+    // }
+
+    // handleDelete(e) {
+    //     debugger
+    //     const li = e.target.parentElement 
+    //     adapter.deleteGame(li)
+    // }
 
     handleAddComment(e){
         e.preventDefault()
@@ -66,7 +73,6 @@ class GameForm {
         newComment.setAttribute("type", "text")
         newComment.setAttribute("placeholder", "comment")
         
-
         const commentSpan = document.querySelector('span#comment-container')
 
         const br = document.createElement("br")

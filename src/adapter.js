@@ -44,7 +44,6 @@ class Adapter {
                 const g = new Game(data.game);
                 g.addToDom()
                 const form = document.querySelector('form')
-                const comments = document.querySelector('form span').children
                 const spanContainer = document.querySelector('form span')
                 Array.from(form).forEach ( n => {
                     if (n.type === "text" ) {
