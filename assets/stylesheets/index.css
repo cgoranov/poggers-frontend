@@ -1,3 +1,11 @@
 body {
     background-image: url(../art/background-controllers.PNG)
-  }
+}
+
+h1 {
+    background-color: azure;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 50px;
+    border-radius: 25px;
+}
