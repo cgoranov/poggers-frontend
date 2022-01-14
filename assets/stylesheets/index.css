@@ -33,3 +33,30 @@ form {
     font-size: 20px;
     padding-left: 300px;
 }
+
+ul#games-container {
+    background-color: azure;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+li {
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: black;
+
+}
+
+ul.comments-list-container li {
+    padding: 10px;
+    border: hidden;
+}
+
+
