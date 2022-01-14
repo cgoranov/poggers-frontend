@@ -33,8 +33,18 @@ class GameForm {
         Array.from(e.target.children).forEach(c => { 
             if (c.nodeName === "INPUT") {
                 formInputs[c.id] = c.value
+            } else if (c.nodeName === "SPAN") {
+                let i = 1
+                Array.from(c.children).forEach( n => {
+                    
+                    if (n.nodeName === "INPUT") {
+                        formInputs[n.className + `${i ++ }`] = n.value
+                    }
+                })
             }
         })
+
+        debugger
 
         adapter.createGames(formInputs)
 
@@ -52,7 +62,7 @@ class GameForm {
 
     handleAddComment(e){
         e.preventDefault()
-        console.log("we hit this!")
+    
         const newComment = document.createElement("INPUT")
         newComment.classList.add("comment-input")
         newComment.setAttribute("type", "text")
