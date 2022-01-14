@@ -2,13 +2,23 @@ body {
     background-image: url(../art/background-controllers.PNG)
 }
 
-h1 {
+div.title {
     background-color: azure;
     margin-left: 200px;
     margin-right: 200px;
-    padding: 50px;
     border-radius: 25px;
     font-family: 'Pacifico', cursive;
-    font-size: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2, h3 {
+    background-color: azure;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
     text-align: center;
 }
