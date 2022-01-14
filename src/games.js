@@ -7,6 +7,8 @@ class Game {
         this.comments = comments
     }
 
+    static gameContainer = () => document.querySelector("ul#games-container")
+
     renderGame(){
         return(
             `<li id="game-${this.id}" data-id=${this.id}>
@@ -14,7 +16,7 @@ class Game {
                 <div class="game-platform" > Platform: ${this.platform}</div>
                 <div> Comments: </div>
                 <ul id="${this.id}-comments-list" class="comments-list-container" ></ul>
-                <button data-action='delete'><i class="fas fa-trash-alt"></i></button>
+                <button class="delete" data-action='delete'><i class="fas fa-trash-alt"></i></button>
             </li>`
                 )
     }
@@ -32,8 +34,23 @@ class Game {
         gamesContainer.innerHTML += this.renderGame()
 
         this.renderComments()
-        adapter.listenForDelete();  
+        this.listenForDelete()
 
+    }
+
+    listenForDelete(){
+    
+        debugger
+        const deleteButtons = Game.gameContainer().querySelectorAll("li button.delete")
+     
+        Array.from(deleteButtons).forEach (b => {
+            b.addEventListener("click", this.handleDelete)
+        }) 
+    }
+
+    handleDelete(e, id) {
+        e.target.parentElement.parentElement.remove()
+        adapter.deleteGame(id)
     }
 
     capitalize(){
