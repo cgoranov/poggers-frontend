@@ -30,8 +30,9 @@ class Game {
     addToDom(){
         const gamesContainer = document.getElementById("games-container");
         gamesContainer.innerHTML += this.renderGame()
+
         this.renderComments()
-        this.listenForDelete()
+        adapter.listenForDelete()
 
     }
 
@@ -45,20 +46,6 @@ class Game {
         return this.name
     }
 
-    listenForDelete(){
-     
-        const deleteButtons = document.querySelectorAll("ul#games-container li button")
-     
-        Array.from(deleteButtons).forEach (b => {
-            if (b.dataset.action === "delete") { 
-                b.addEventListener("click", this.handleDelete)
-            }
-        }) 
-    }
 
-    handleDelete(e) {
-        const li = e.target.parentElement 
-        adapter.deleteGame(li)
-    }
 
 }

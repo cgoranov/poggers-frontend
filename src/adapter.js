@@ -55,10 +55,24 @@ class Adapter {
             } else {
                 alert(data.errors)
             }
+            
         })
         .catch(err => console.error('Error', err))
+    }
 
+    listenForDelete(){
+        const deleteButtons = document.querySelectorAll("ul#games-container li button")
+     
+        Array.from(deleteButtons).forEach (b => {
+            if (b.dataset.action === "delete") { 
+                b.addEventListener("click", this.handleDelete)
+            }
+        }) 
+    }
 
+    handleDelete(e) {
+        const li = e.target.parentElement 
+        adapter.deleteGame(li)
     }
 
     deleteGame(li){
@@ -73,6 +87,5 @@ class Adapter {
         })
         .catch(err => console.error(err))
     }
-
 
 }

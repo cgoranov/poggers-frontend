@@ -4,8 +4,8 @@ body {
 
 div.title {
     background-color: azure;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 400px;
+    margin-right: 400px;
     border-radius: 25px;
     font-family: 'Pacifico', cursive;
     font-size: 40px;
@@ -20,8 +20,8 @@ div.title, h2 {
 
 h3 {
     background-color: azure;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 400px;
+    margin-right: 400px;
     padding: 10px;
     border-radius: 25px;
     font-family: 'Courier New', Courier, monospace;
@@ -32,8 +32,8 @@ h3 {
 
 form {
     background-color: azure;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 400px;
+    margin-right: 400px;
     padding: 10px;
     border-radius: 25px;
     font-family: 'Courier New', Courier, monospace;
@@ -44,8 +44,8 @@ form {
 
 ul#games-container {
     background-color: azure;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 400px;
+    margin-right: 00px;
     border-radius: 25px;
     padding: 20px;
     font-family: 'Courier New', Courier, monospace;

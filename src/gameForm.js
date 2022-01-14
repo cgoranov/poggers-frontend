@@ -45,26 +45,6 @@ class GameForm {
 
     }
 
-    // listenForDelete(){
-    //     const gamesContainer = document.getElementById("games-container");
-    //     gamesContainer.addEventListener("click", this.handleDelete)
-
-
-    //     const deleteButtons = document.querySelectorAll("ul#games-container li button")
-    //     debugger
-    //     // Array.from(deleteButtons).forEach (b => {
-    //     //     if (b.dataset.action === "delete") { 
-    //     //         b.addEventListener("click", this.handleDelete)
-    //     //     }
-    //     // }) 
-    // }
-
-    // handleDelete(e) {
-    //     debugger
-    //     const li = e.target.parentElement 
-    //     adapter.deleteGame(li)
-    // }
-
     handleAddComment(e){
         e.preventDefault()
     
