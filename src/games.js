@@ -1,10 +1,13 @@
 class Game {
 
+    static all = []
+
     constructor({id, name, platform, comments}){
         this.id = id
         this.name = name
         this.platform = platform
         this.comments = comments
+        Game.all.push(this)
     }
 
     static gameContainer = () => document.querySelector("ul#games-container")
