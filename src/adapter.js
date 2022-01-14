@@ -42,7 +42,8 @@ class Adapter {
         .then(data => {  
             if (data.status === 201){
                 const g = new Game(data.game);
-                g.addToDom()
+                g.addToDom();
+                
                 const form = document.querySelector('form')
                 const spanContainer = document.querySelector('form span')
                 Array.from(form).forEach ( n => {
@@ -61,7 +62,10 @@ class Adapter {
     }
 
     listenForDelete(){
-        const deleteButtons = document.querySelectorAll("ul#games-container li button")
+      
+        const deleteButtons = document.querySelectorAll("ul#games-container li button") 
+
+        debugger
      
         Array.from(deleteButtons).forEach (b => {
             if (b.dataset.action === "delete") { 

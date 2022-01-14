@@ -32,7 +32,7 @@ class Game {
         gamesContainer.innerHTML += this.renderGame()
 
         this.renderComments()
-        adapter.listenForDelete()
+        adapter.listenForDelete();  
 
     }
 
