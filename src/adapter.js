@@ -60,9 +60,8 @@ class Adapter {
         .catch(err => console.error('Error', err))
     }
 
-    deleteGame(id){
-        debugger
-        fetch(`${this.url}/${id}`, { method: "DELETE"})
+    deleteGame(li){
+        fetch(`${this.url}/${li.dataset.id}`, { method: "DELETE"})
         .then(r => r.json())
         .then(data => {
             if (data.message === "Successfully deleted"){

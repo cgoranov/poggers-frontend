@@ -16,7 +16,7 @@ class Game {
                 <div class="game-platform" > Platform: ${this.platform}</div>
                 <div> Comments: </div>
                 <ul id="${this.id}-comments-list" class="comments-list-container" ></ul>
-                <button class="delete" data-action='delete'><i class="fas fa-trash-alt"></i></button>
+                <button class="delete" data-action='delete'>X</button>
             </li>`
                 )
     }
@@ -39,8 +39,6 @@ class Game {
     }
 
     listenForDelete(){
-    
-        debugger
         const deleteButtons = Game.gameContainer().querySelectorAll("li button.delete")
      
         Array.from(deleteButtons).forEach (b => {
@@ -48,9 +46,10 @@ class Game {
         }) 
     }
 
-    handleDelete(e, id) {
-        e.target.parentElement.parentElement.remove()
-        adapter.deleteGame(id)
+    handleDelete(e) {
+        debugger
+        const li = e.target.parentElement
+        adapter.deleteGame(li)
     }
 
     capitalize(){
