@@ -18,7 +18,18 @@ h2, h3 {
     margin-right: 200px;
     padding: 10px;
     border-radius: 25px;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     text-align: center;
+}
+
+form {
+    background-color: azure;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding-left: 300px;
 }
