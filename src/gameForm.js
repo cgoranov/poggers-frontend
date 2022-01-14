@@ -44,8 +44,6 @@ class GameForm {
             }
         })
 
-        debugger
-
         adapter.createGames(formInputs)
 
     }

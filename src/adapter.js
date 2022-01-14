@@ -16,6 +16,13 @@ class Adapter {
     }
 
     createGames(formInputs){
+        const commentsArray = []
+        for (const k in formInputs) {
+            if (k.includes("comment")) {
+               commentsArray.push({"content" : formInputs[k]})
+            }
+        }
+
         fetch(this.url, {
             method: "POST",
             headers: {
@@ -23,10 +30,11 @@ class Adapter {
                 "Accept": "application/json"
             },
             body: JSON.stringify({
-                game: {
+                game: {    
                     name: formInputs["name-input"],
                     platform: formInputs["platform-input"],
-                    comment_attributes: [{content: formInputs["comment-input1"]}, {content: formInputs["comment-input2"]}]
+                    comment_attributes: commentsArray
+                    
                 }
             })
         })
@@ -36,10 +44,17 @@ class Adapter {
                 const g = new Game(data.game);
                 g.addToDom()
                 const form = document.querySelector('form')
-                form.children[0].value = ''
-                form.children[2].value = ''
-                form.children[4].value = ''
-                form.children[6].value = ''
+                const comments = document.querySelector('form span').children
+                Array.from(form).forEach ( n => {
+                    if (n.type === "text" ) {
+                        n.value = ""
+                    }
+                })
+                Array.from(comments).forEach ( comm => {
+                    if (comm.type === "text") {
+                        comm.value = ""
+                    }
+                })
             } else {
                 alert(data.errors)
             }
