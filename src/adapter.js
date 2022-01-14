@@ -51,11 +51,6 @@ class Adapter {
                         n.value = ""
                     }
                 })
-                Array.from(comments).forEach ( comm => {
-                    if (comm.type === "text") {
-                        comm.value = ""
-                    }
-                })
                 spanContainer.innerHTML = '<input class="comment-input"  placeholder="comment" type="text"/>'
 
             } else {
