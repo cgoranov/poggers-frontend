@@ -23,6 +23,30 @@ class GameForm {
         gameForm.addEventListener("submit", this.handleSubmit)
     }
 
+    attachSearchHandler() {
+        const searchBar = document.getElementById("game-search")
+        searchBar.addEventListener("change", this.handleSearch)
+    }
+
+    // input type to search
+
+    handleSearch (e) {
+        const searchValue = e.target.value.toLowerCase() 
+        const results = Game.all.filter( game => {
+                return game.name.toLowerCase().includes(searchValue) 
+        })
+
+        if (results.length === 0) {
+            alert("no matches found!")
+        } else {
+            Game.gameContainer().innerHTML = ''
+            results.forEach( game => {
+                game.addToDom()
+            })
+        }
+        
+    }
+
     handleSubmit(e) {
         e.preventDefault()
         

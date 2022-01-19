@@ -8,6 +8,7 @@ class Game {
         this.platform = platform
         this.comments = comments
         Game.all.push(this)
+        // this.addToDom() - > add to your refactor, there is not siutation where you wont make a game and not add to DOM
     }
 
     static gameContainer = () => document.querySelector("ul#games-container")

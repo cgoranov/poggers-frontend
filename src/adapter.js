@@ -15,6 +15,10 @@ class Adapter {
         })
     }
 
+    //watch your naming conventions such as k. instead you should use key! bad habit. make it more clear
+
+    //blocking vs non blocking 
+
     createGames(formInputs){
         const commentsArray = []
         for (const k in formInputs) {
