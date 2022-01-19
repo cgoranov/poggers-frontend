@@ -84,4 +84,14 @@ input#game-search {
     box-shadow: 10px 10px 5px grey;
 }
 
+button#search-button {
+    background-color: azure;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 25px;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 10px 10px 5px grey;
+}
+
 
